@@ -13,19 +13,22 @@
     
     <!--- Seo Part-->
     
-    <link rel="canonical" href="http://example.com/categories/algorithm/"/>
+    <link rel="canonical" href="http://example.com/2023/05/22/区间合并/"/>
     <meta name="robots" content="index,follow">
     <meta name="googlebot" content="index,follow">
     <meta name="revisit-after" content="1 days">
     
-        <meta name="description" content="my blog">
-<meta property="og:type" content="website">
-<meta property="og:title" content="KONG">
-<meta property="og:url" content="http://example.com/categories/Algorithm/index.html">
+        <meta name="description" content="离散化思路为什么要离散化很简单来说就是会被爆内存，放不下，需要将无用的过滤 怎么离散化将需要用到的坐标先存到一个数组中，然后将数组排序降重，得到一个有序且单调的数组。然后进行相应的操作，在本题中，需要将数加到已经离散化的坐标上。最后进行前缀和，得到区间和。 例题题目描述假定有一个无限长的数轴，数轴上每个坐标上的数都是 0，现在，我们首先进行 n 次操作，每次操作将某一位置 x 上的数加 c，接下来">
+<meta property="og:type" content="article">
+<meta property="og:title" content="区间合并">
+<meta property="og:url" content="http://example.com/2023/05/22/%E5%8C%BA%E9%97%B4%E5%90%88%E5%B9%B6/index.html">
 <meta property="og:site_name" content="KONG">
-<meta property="og:description" content="my blog">
+<meta property="og:description" content="离散化思路为什么要离散化很简单来说就是会被爆内存，放不下，需要将无用的过滤 怎么离散化将需要用到的坐标先存到一个数组中，然后将数组排序降重，得到一个有序且单调的数组。然后进行相应的操作，在本题中，需要将数加到已经离散化的坐标上。最后进行前缀和，得到区间和。 例题题目描述假定有一个无限长的数轴，数轴上每个坐标上的数都是 0，现在，我们首先进行 n 次操作，每次操作将某一位置 x 上的数加 c，接下来">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2023-05-22T08:33:34.000Z">
+<meta property="article:modified_time" content="2023-05-22T08:41:06.279Z">
 <meta property="article:author" content="Lwx">
+<meta property="article:tag" content="Acwing">
 <meta name="twitter:card" content="summary">
     
     
@@ -38,7 +41,7 @@
     
     <title>
         
-            Category: Algorithm -
+            区间合并 -
         
         LWX
     </title>
@@ -358,45 +361,213 @@
 
                 
                     <div class="fade-in-down-animation">
-    <div class="category-container">
-        <div class="category-name">
-            <i class="fa-solid fa-folder"></i>&nbsp;Algorithm
-        </div>
-        <div class="category-post-list">
+    <div class="post-page-container">
+        <div class="article-content-container">
+
             
-<div class="archive-list-container">
+            
+                <div class="article-title">
+                    <h1 class="article-title-regular">区间合并</h1>
+                </div>
+            
+                
+            
+
+            
+                <div class="article-header">
+                    <div class="avatar">
+                        <img src="https://mp-2d7510e2-1079-4f79-9547-6e0037dd5c25.cdn.bspapp.com/cloudstorage/92eac884-6ace-4941-9cad-b978dfa9b53c.png">
+                    </div>
+                    <div class="info">
+                        <div class="author">
+                            <span class="name">LWX</span>
+                            
+                                <span class="author-label">Lv1</span>
+                            
+                        </div>
+                        <div class="meta-info">
+                            <div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        <i class="fa-regular fa-pen-fancy"></i>&nbsp;
+        <span class="desktop">2023-05-22 16:33:34</span>
+        <span class="mobile">2023-05-22 16:33</span>
+        <span class="hover-info">Created</span>
+    </span>
     
-        <section class="archive-item">
-            <div class="archive-item-header">
-                <span class="archive-year">2023</span>
-                <span class="archive-year-post-count">[2]</span>
-            </div>
-            <ul class="article-list">
-              
-              <li class="article-item" date-is='05-22'>
-                <a href="/2023/05/22/%E5%8C%BA%E9%97%B4%E5%90%88%E5%B9%B6/">
-                  <span class="article-title">区间合并</span>
-                </a>
-              </li>
-              
-              <li class="article-item" date-is='05-21'>
-                <a href="/2023/05/21/quick-sort/">
-                  <span class="article-title">quick_sort</span>
-                </a>
-              </li>
-              
+        <span class="article-date article-meta-item">
+            <i class="fa-regular fa-wrench"></i>&nbsp;
+            <span class="desktop">2023-05-22 16:41:06</span>
+            <span class="mobile">2023-05-22 16:41</span>
+            <span class="hover-info">Updated</span>
+        </span>
+    
+
+    
+        <span class="article-categories article-meta-item">
+            <i class="fa-regular fa-folders"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/categories/Algorithm/">Algorithm</a>&nbsp;
+                    </li>
+                
             </ul>
-        </section>
+        </span>
+    
+    
+        <span class="article-tags article-meta-item">
+            <i class="fa-regular fa-tags"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/tags/Acwing/">Acwing</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+
+    
+    
+    
+    
+        <span class="article-pv article-meta-item">
+            <i class="fa-regular fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
+        </span>
     
 </div>
 
-        </div>
-    </div>
-    <div class="category-paginator">
-        <div class="paginator">
-    <span class="page-number current">1</span>
+                        </div>
+                    </div>
+                </div>
+            
+
+            <div class="article-content markdown-body">
+                <h3 id="离散化思路"><a href="#离散化思路" class="headerlink" title="离散化思路"></a>离散化思路</h3><h4 id="为什么要离散化"><a href="#为什么要离散化" class="headerlink" title="为什么要离散化"></a>为什么要离散化</h4><p>很简单来说就是会被爆内存，放不下，需要将无用的过滤</p>
+<h4 id="怎么离散化"><a href="#怎么离散化" class="headerlink" title="怎么离散化"></a>怎么离散化</h4><p>将需要用到的坐标先存到一个数组中，然后将数组排序降重，得到一个有序且单调的数组。<br>然后进行相应的操作，在本题中，需要将数加到已经离散化的坐标上。<br>最后进行前缀和，得到区间和。</p>
+<h3 id="例题"><a href="#例题" class="headerlink" title="例题"></a>例题</h3><h4 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h4><p>假定有一个无限长的数轴，数轴上每个坐标上的数都是 0，现在，我们首先进行 n 次操作，每次操作将某一位置 x 上的数加 c，接下来，进行 m<br>次询问，每个询问包含两个整数 l 和 r，你需要求出在区间 [l,r] 之间的所有数的和。<br>原题链接: <a class="link"   target="_blank" rel="noopener" href="https://www.acwing.com/problem/content/805/" >区间合并 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+<h4 id="C-代码"><a href="#C-代码" class="headerlink" title="C++代码"></a>C++代码</h4><div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;iostream&gt;</span><br><span class="line">#include &lt;vector&gt;</span><br><span class="line">#include &lt;algorithm&gt;</span><br><span class="line"></span><br><span class="line">using namespace std;</span><br><span class="line"></span><br><span class="line">const int N = 300010;</span><br><span class="line"></span><br><span class="line">int n, m;</span><br><span class="line">int a[N];//存储坐标插入的值</span><br><span class="line">int s[N];//存储数组a的前缀和</span><br><span class="line">vector&lt;int&gt; alls;  //存储（所有与插入和查询有关的）坐标</span><br><span class="line">vector&lt;pair&lt;int, int&gt;&gt; add, query; //存储插入和询问操作的数据</span><br><span class="line"></span><br><span class="line">int find(int x) &#123; //返回的是输入的坐标的离散化下标</span><br><span class="line">    int l = 0, r = alls.size() - 1;</span><br><span class="line">    while (l &lt; r) &#123;</span><br><span class="line">        int mid = (l + r) &gt;&gt; 1;</span><br><span class="line">        if (alls[mid] &gt;= x) r = mid;</span><br><span class="line">        else l = mid + 1;</span><br><span class="line">    &#125;</span><br><span class="line">    return r + 1;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">    scanf(&quot;%d%d&quot;, &amp;n, &amp;m);</span><br><span class="line"></span><br><span class="line">    //处理插入</span><br><span class="line">    for (int i = 1; i &lt;= n; i ++ )</span><br><span class="line">    &#123;</span><br><span class="line">        int x, c;</span><br><span class="line">        scanf(&quot;%d%d&quot;, &amp;x, &amp;c);</span><br><span class="line">        alls.push_back(x);</span><br><span class="line">        add.push_back(&#123;x, c&#125;);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    //处理询问</span><br><span class="line">       for (int i = 1; i &lt;= m; i++) &#123;</span><br><span class="line">        int l , r;</span><br><span class="line">        scanf(&quot;%d%d&quot;, &amp;l, &amp;r);</span><br><span class="line">        query.push_back(&#123;l, r&#125;);</span><br><span class="line">        alls.push_back(l);</span><br><span class="line">        alls.push_back(r);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    //排序，去重</span><br><span class="line">    sort(alls.begin(), alls.end());</span><br><span class="line">    alls.erase(unique(alls.begin(), alls.end()), alls.end());</span><br><span class="line">    //执行前n次插入操作</span><br><span class="line">    for (auto item : add) &#123;</span><br><span class="line">        int x = find(item.first);</span><br><span class="line">        a[x] += item.second;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    //求前缀和</span><br><span class="line">    for (int i = 1; i &lt;= alls.size(); i++) s[i] = s[i-1] + a[i];</span><br><span class="line"></span><br><span class="line">    //计算并且输出需要的前缀和</span><br><span class="line">     for (auto item : query) &#123;</span><br><span class="line">        int l = find(item.first);</span><br><span class="line">        int r = find(item.second);</span><br><span class="line">        printf(&quot;%d\n&quot;, s[r] - s[l-1]);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
+            </div>
+
+            
+                <div class="post-copyright-info">
+                    <div class="article-copyright-info-container">
+    <ul>
+        <li><strong>Title:</strong> 区间合并</li>
+        <li><strong>Author:</strong> LWX</li>
+        <li><strong>Created at:</strong> 2023-05-22 16:33:34</li>
+        
+            <li>
+                <strong>Updated at:</strong> 2023-05-22 16:41:06
+            </li>
+        
+        <li>
+            <strong>Link:</strong> https://redefine.ohevan.com/2023/05/22/区间合并/
+        </li>
+        <li>
+            <strong>License:</strong> This work is licensed under <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">CC BY-NC-SA 4.0</a>.
+        </li>
+    </ul>
 </div>
 
+                </div>
+            
+
+            
+                <ul class="post-tags-box">
+                    
+                        <li class="tag-item">
+                            <a href="/tags/Acwing/">#Acwing</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            
+
+            
+
+            
+                <div class="article-nav">
+                    
+                    
+                        <div class="article-next">
+                            <a class="next"
+                            rel="next"
+                            href="/2023/05/21/quick-sort/"
+                            >
+                                <span class="title flex-center">
+                                    <span class="post-nav-title-item">quick_sort</span>
+                                    <span class="post-nav-item">Next posts</span>
+                                </span>
+                                <span class="right arrow-icon flex-center">
+                                    <i class="fa-solid fa-chevron-right"></i>
+                                </span>
+                            </a>
+                        </div>
+                    
+                </div>
+            
+
+
+            
+                <div class="comment-container">
+                    <div class="comments-container">
+    <div id="comment-anchor"></div>
+    <div class="comment-area-title">
+        <i class="fa-solid fa-comments"></i>&nbsp;Comments
+    </div>
+    
+
+        
+            
+ 
+    <div id="waline"></div>
+    <script type="module"  data-pjax>
+        import { init } from 'https://evan.beee.top/js/waline.mjs';
+
+        function loadWaline() {
+            init({
+                el: '#waline',
+                serverURL: 'https://example.example.com',
+                lang: 'zh-CN',
+                dark: 'body[class~="dark-mode"]',
+                requiredMeta: ['nick','mail'], // cannot customize by theme config, change it yourself
+            });
+        }
+
+        if ('true') {
+            const loadWalineTimeout = setTimeout(() => {
+                loadWaline();
+                clearTimeout(loadWalineTimeout);
+            }, 1000);
+        } else {
+            window.addEventListener('DOMContentLoaded', loadWaline);
+        }
+        
+    </script>
+
+
+
+        
+    
+</div>
+
+                </div>
+            
+        </div>
+
+        
+            <div class="toc-content-container">
+                <div class="post-toc-wrap">
+    <div class="post-toc">
+        <div class="toc-title">On this page</div>
+        <div class="page-title">区间合并</div>
+        <ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%A6%BB%E6%95%A3%E5%8C%96%E6%80%9D%E8%B7%AF"><span class="nav-text">离散化思路</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BE%8B%E9%A2%98"><span class="nav-text">例题</span></a></li></ol>
+
+    </div>
+</div>
+            </div>
+        
     </div>
 </div>
 
@@ -475,6 +646,27 @@
         </div>
     </div>
 
+    
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="article-tools-list">
+        <!-- TOC aside toggle -->
+        
+            <li class="right-bottom-tools page-aside-toggle">
+                <i class="fa-regular fa-outdent"></i>
+            </li>
+        
+
+        <!-- go comment -->
+        
+            <li class="go-comment">
+                <i class="fa-regular fa-comments"></i>
+            </li>
+        
+    </ul>
+</div>
+
+        </div>
     
 
     <div class="right-side-tools-container">
@@ -586,6 +778,16 @@
 
 
 <div class="post-scripts pjax">
+    
+        
+<script src="/js/tools/tocToggle.js"></script>
+
+<script src="/js/libs/anime.min.js"></script>
+
+<script src="/js/layouts/toc.js"></script>
+
+<script src="/js/plugins/tabs.js"></script>
+
     
 </div>
 
